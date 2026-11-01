@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=平板双系统切换
+Exec=/usr/local/bin/liuqin-dual-menu
+Icon=system-reboot
+Terminal=false
+Categories=System;Utility;

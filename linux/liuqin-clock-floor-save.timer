@@ -1,0 +1,11 @@
+[Unit]
+Description=Keep reviewed local UTC floor fresh without pretending NTP sync
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+AccuracySec=1min
+Unit=liuqin-clock-floor-save.service
+
+[Install]
+WantedBy=timers.target

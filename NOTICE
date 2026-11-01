@@ -1,0 +1,10 @@
+This repository contains original safety wrappers, user interfaces and optional
+Linux tuning helpers. It does not redistribute upstream boot images, kernel
+code, vendor firmware, KernelSU binaries or device-specific credentials.
+
+External dependencies remain subject to their own licenses and notices:
+- https://github.com/yzddmr6/xiaomipad-6pro-mainline
+- https://github.com/tiann/KernelSU
+- Python, Ubuntu, Android SDK and the relevant system utilities.
+
+The MIT license applies only to the original files in this repository.

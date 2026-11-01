@@ -1,0 +1,14 @@
+[Unit]
+Description=Save validated local UTC lower bound
+After=local-fs.target liuqin-clock-floor.service
+ConditionPathExists=/var/lib/liuqin-clock-floor/utc-floor.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /usr/local/libexec/liuqin-clock-floor/clock-floor.py save
+TimeoutStartSec=45
+NoNewPrivileges=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/liuqin-clock-floor
+CapabilityBoundingSet=

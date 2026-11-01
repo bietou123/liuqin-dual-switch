@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
+<policyconfig>
+  <action id="io.github.bietou123.liuqin-dual-switch">
+    <description>Tablet dual-system safety tool</description>
+    <description xml:lang="zh_CN">平板双系统安全工具</description>
+    <message>Administrator authentication is required for boot-image verification or an explicitly confirmed switch</message>
+    <message xml:lang="zh_CN">需要管理员授权核验启动镜像或执行已确认的系统切换</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/local/sbin/liuqin-dual-switch</annotate>
+  </action>
+</policyconfig>

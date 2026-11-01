@@ -1,0 +1,21 @@
+[Unit]
+Description=Restore reviewed software UTC lower bound (not RTC or NTP)
+After=local-fs.target
+Before=chrony.service display-manager.service
+ConditionPathExists=/var/lib/liuqin-clock-floor/utc-floor.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /usr/local/libexec/liuqin-clock-floor/clock-floor.py restore
+ExecStop=/usr/bin/python3 -I /usr/local/libexec/liuqin-clock-floor/clock-floor.py save
+RemainAfterExit=yes
+TimeoutStartSec=45
+TimeoutStopSec=45
+NoNewPrivileges=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/liuqin-clock-floor
+CapabilityBoundingSet=CAP_SYS_TIME
+
+[Install]
+WantedBy=multi-user.target

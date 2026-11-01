@@ -1,0 +1,6 @@
+id=liuqin_dual_return
+name=Liuqin reviewed return to Ubuntu
+version=0.1.0
+versionCode=1
+author=bietou123 with Codex assistance
+description=Fail-closed safety wrapper for an independently reviewed liuqin_boot_ubuntu module. Empty profile does nothing.
